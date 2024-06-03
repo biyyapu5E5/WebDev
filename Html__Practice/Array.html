@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            let s = 200;
+            document.write(s+"<br>");
+            var d = new Array(1,2,3,4,5,6);
+            for(i=0;i<d.length;i++)
+            {
+                document.write("Index of "+i+" : "+d[i]+"<br>");
+            }
+            const k = "madam";
+            const k2 = new String("Hei");
+            let flag=0;
+            for(var i=0;i<k.length;i++)
+            {
+                if(k.charAt(i)!=k.charAt(k.length-i-1))
+                {
+                document.write("<br>Not palindrome<br>");
+                flag = 1;
+                break;
+                }
+            }
+            if(flag!=1)
+            document.write("<br>Palindrome<br>");
+
+            let l = ["hei",10,true]
+            document.write("<br>Original list ["+l+"]<br>");
+            l.push(20);
+            document.write("After adding an element list : ["+l+"]<br>");
+
+            l.shift();
+            document.write("After shifting an element list : ["+l+"]<br>");
+
+            l.unshift("Paddu");
+            document.write("After unshifting an element list : ["+l+"]<br>");
+
+
+        </script>
+    </body>
+</html>

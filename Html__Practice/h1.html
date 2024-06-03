@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>H1 Document</title>
+</head>
+<body title="STATIC AND DYNAMIC">
+    <pre >
+    <h1>Static vs Dynamic Loading</h1>
+The choice between Static or Dynamic Loading is to be made at the time of computer program
+being developed. If you have to load your program statically, then at the time of compilation,
+the complete programs will be compiled and linked without leaving any external program or
+module dependency. The linker combines the object program with other necessary object
+modules into an absolute program, which also includes logical addresses.
+If you are writing a Dynamically loaded program, then your compiler will compile the
+program and for all the modules which you want to include dynamically, only references will
+be provided and rest of the work will be done at the time of execution.
+At the time of loading, with static loading, the absolute program (and data) is loaded into
+memory in order for execution to start.
+If you are using dynamic loading, dynamic routines of the library are stored on a disk in
+relocatable form and are loaded into memory only when they are needed by the program.
+Static vs Dynamic Linking
+As explained above, when static linking is used, the linker combines all other modules needed
+by a program into a single executable program to avoid any runtime dependency.
+When dynamic linking is used, it is not required to link the actual module or library with the
+program, rather a reference to the dynamic module is provided at the time of compilation and
+linking. Dynamic Link Libraries (DLL) in Windows and Shared Objects in Unix are good
+examples of dynamic libraries.
+Swapping
+Swapping is a mechanism in which a process can be swapped temporarily out of main memory
+(or move) to secondary storage (disk) and make that memory available to other processes. At
+some later time, the system swaps back the process from the secondary storage to main
+memory.
+Though performance is usually affected by swapping process but it helps in running multiple
+and big processes in parallel and that's the reason Swapping is also known as a technique 
+    </pre>
+</body>
+</html>

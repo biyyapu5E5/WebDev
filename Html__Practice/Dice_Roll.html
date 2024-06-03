@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Random Dice Rolls</title>
+    </head>
+<body>
+    <div style="word-spacing: 20px; margin-left: 500px; margin-top: 200px;">
+        <button onclick="myFunction()"><h1>Dice</h1></button>
+        <h3 id="Demo"></h3>
+        <p id="P1"></p>
+        <p id="P2"></p>
+        <script type="text/javascript">
+
+                function myFunction()
+                {
+                    var roll1 = Math.floor(Math.random()*6) + 1;
+                    var roll2 = Math.floor(Math.random()*6) + 1;
+                    var s;
+                    if(roll1>roll2)
+                        s = "<h1>Player 1 Won the game...!!!</h1>";
+
+                    else if(roll2>roll1)
+                        s = "<h1>Player 2 Won the game....!!!</h1>";
+
+                    else
+                        s="<h1>Match Draw";
+
+                    document.getElementById("Demo").innerHTML=s;
+                    document.getElementById("P1").innerHTML="Player 1 Score = "+roll1;
+                    document.getElementById("P2").innerHTML="Player 2 Score = "+roll2;
+                    //document.write("Player1 Score = "+roll1+"<br>");
+                    //document.write("Player2 Score = "+roll2);
+                }
+        </script>
+    </div>
+</body>
+</html>
+ 

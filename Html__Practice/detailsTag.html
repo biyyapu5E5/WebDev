@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:black;
+        color: aliceblue;
+    }
+    #content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 500px;
+        width: 500px;
+        background-color: brown;
+        /* border: 2px solid white; */
+    }
+    div{
+        display: inline-block;
+    }
+    input{
+        position: absolute;
+        padding: 15px 25px;
+        background: transparent;
+        border: 2px solid greenyellow;
+        border-radius: 10px;
+        outline: none;
+        transition: 0.1s ease;
+    }
+    label{
+        color: aliceblue;
+        position: absolute;
+        top: 12px;
+        left: 17px;
+        transition: 0.1s ease;
+
+    }
+    .box{
+        position: relative;
+        margin-left: 160px;
+    }
+    input:focus + label{
+        background-color: brown;
+        padding: 0px 8px;
+        transform: translateY(-18px) scale(1.2);
+        z-index: 1;
+    }
+</style>
+<body>
+    <main><h1></h1>This is Main page</main>
+    <br>
+    <details>
+        <summary>setTimeout() method</summary>
+        <p>
+            The setTimeout() method calls a function or evaluates an expression
+            after a specified number of milliseconds. This function is only
+            executed once. Use the clearTime() method to prevent the function
+            running.
+        </p>
+    </details>
+    <br>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sint quidem
+        ipsum quos reprehenderit odio nostrum saepe libero magni explicabo?Lorem 
+        ipsum dolor sit, amet consectetur adipisicing elit. Ut ad, quibusdam consequuntur
+        consectetur velit explicabo quas eum. Quos, autem? Reprehenderit, libero. Suscipit,
+        accusantium non enim dolorem delectus repellendus, maxime ratione nisi tempore labore 
+        amet sint exercitationem praesentium commodi. Mollitia, consequatur.
+    </section>
+    <br>
+    <div id = 'content'>
+        <div class = 'box'>
+            <input type="text" name="UserName" id="username">
+            <label for="UserName" class = 'label'>UserName</label>
+        </div>
+        <div class = 'box'>
+            <input type="text" name="Userroll" id="userroll">
+            <label for="Userroll" class = 'label'>UserRoll</label>
+        </div>
+        <div class = 'box'>            
+            <input type="text" name="Userid" id="userid">
+            <label for="Userid" class = 'label'>UserId</label>
+        </div>
+    </div>
+</body>
+
+</html>
