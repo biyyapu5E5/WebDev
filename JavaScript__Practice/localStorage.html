@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+
+<body>
+    <p id="display"></p>
+    <p id="displaying"></p>
+    <script>
+        const obj = { fname: "Manu", lname: "Pasupuleti" };
+        const obj2 = { fname: "Gopika", lname: "Nagasuri" };
+        localStorage.clear();
+        localStorage.setItem('user1', JSON.stringify(obj));
+        localStorage.setItem('user2', JSON.stringify(obj2));
+        var dis = ''
+        const display = document.getElementById('display');
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            const storedValue = JSON.parse(value);
+            dis = `Key : ${key} <br> Value : ${value} <br> firstName:  ${storedValue.fname} <br> lastName:  ${storedValue.lname} <br>` + dis;
+            display.innerHTML = dis;
+            displaying.innerHTML +=  
+            `Key : ${key} <br>
+            Value : ${value} <br> 
+            firstName:  ${storedValue.fname} <br> 
+            lastName:  ${storedValue.lname} <br>`;
+        }
+    </script>
+</body>
+
+</html>

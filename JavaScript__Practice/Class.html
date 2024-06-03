@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo-1"></p>
+    <p id="demo-2"></p>
+    <h2>Adding Methods to Existing Class</h2>
+    <p id="demo-3"></p>
+    <p id="demo-4"></p>
+    <script>
+        class Person{
+            constructor(fname,lname){
+                this.firstName = fname;
+                this.lastName = lname;
+                //Method
+                this.fullName = function()
+                {
+                    return this.firstName +' '+this.lastName;
+                }
+                // Arrow method
+                this.fullNameArrow = () => this.firstName +' '+this.lastName;
+                
+            }
+            // Method
+            display(){
+                return `My Name is ${this.firstName}`;
+            }
+            // Method with parameter
+            changefullName(name){
+                let oldName = this.fullName();
+                let newName = name.split(' ');
+                this.firstName = newName[0];
+                this.lastName = newName[1];
+                this.fullName = function(){return name};
+                this.fullNameArrow = ()=> name;
+                return `My Old Name ${oldName} Changed to ${name}`;
+            }
+        }
+        const p1 = new Person('Padmini','Biyyapu');
+        const p2 = new Person('Padmini'); // Does not check parameters either passed or not
+
+        document.getElementById('demo-1').innerHTML = 
+        `<pre>
+        <h2>Person Class Detailes:</h2> 
+        <h3> p1 Object Detailes</h3>
+        firstName           : ${p1.firstName}
+        lastName            : ${p1.lastName}
+        fullName()          : ${p1.fullName()}
+        fullNameArrow()     : ${p1.fullNameArrow()}
+        display()           : ${p1.display()}
+        <h4> After Changing </h4>
+        changefullName()    : ${p1.changefullName("Venkat Biyyapu")}
+        firstName           : ${p1.firstName}
+        lastName            : ${p1.lastName}
+        fullName()          : ${p1.fullName()}
+        fullNameArrow()     : ${p1.fullNameArrow()}
+        display()           : ${p1.display()}
+        </pre>`;
+
+        document.getElementById('demo-2').innerHTML = 
+        `<pre>
+        <h2>Person Class Detailes:</h2> 
+        <h3> p2 Object Detailes</h3>
+        firstName           : ${p2.firstName}
+        lastName            : ${p2.lastName}
+        fullName()          : ${p2.fullName()}
+        fullNameArrow()     : ${p2.fullNameArrow()}
+        display()           : ${p2.display()}
+        <h4> After Changing </h42
+        changefullName()    : ${p2.changefullName("Venkat Biyyapu")}
+        firstName           : ${p2.firstName}
+        lastName            : ${p2.lastName}
+        fullName()          : ${p2.fullName()}
+        fullNameArrow()     : ${p2.fullNameArrow()}
+        display()           : ${p2.display()}
+        </pre>`;
+
+        class Student{
+            constructor(fname,lname){
+                this.first = fname;
+                this.last = lname;
+            }
+        }
+        // Adding Methods to Existing class for every Object
+        Object.defineProperty(Student.prototype,'fullName',{
+            // Normal function 
+            value: function(){
+                return `I am ${this.first + ' '+ this.last}`;
+            }
+        })
+
+        const st1 = new Student('Padmini','Biyyapu');
+        const st2 = new Student('Venkat','Biyyapu');
+
+        document.getElementById('demo-3').innerHTML = 
+        `<h2>Student Class Detailes: </h2>
+        <h3> st1 Object Detailes: </h3>
+        <pre>
+            fullName: ${st1.fullName()}
+        </pre>`;
+    
+        document.getElementById('demo-4').innerHTML = 
+        `<h3> st2 Object Detailes: </h3>
+        <pre>
+            fullName: ${st2.fullName()}
+        </pre>`;
+
+    </script>
+</body>
+</html>

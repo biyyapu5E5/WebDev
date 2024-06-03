@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Console</h1>
+    <script>
+
+        // setInterval : Allows function to run repeatedly after the time interval
+        // clearInterval : clears the Interval time
+
+          function greeting() {
+            console.log("GoodMorning...!!");
+        }
+        setInterval(greeting,4000);
+        
+        var count = 0;
+        var len;
+        function details(names_arr,id_arr) {
+                len = names_arr.length;
+                if(count==len){
+                    clearInterval(timeInterval);
+                }
+                else{
+                    console.log(`my name is  ${names_arr[count]}  id =  ${id_arr[count]}`);
+                    count+=1;
+                }
+        }
+        var timeInterval = setInterval(details,2000,['Me','Bro','Mom','Dad'],[101,102,103,104])
+
+        // ShortHand representation for setTimeout
+        // setInterval(() => {
+            
+        // }, timeout);
+
+        // setInterval((name) => {
+        //     console.log(`Good Morning.... ${name}...!!`);
+        // }, 4000,"Padmini");
+    </script>
+</body>
+</html>

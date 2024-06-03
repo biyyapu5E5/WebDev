@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    div 
+    {
+        font-size: 30px;
+    }
+    p 
+    {
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div>
+        for - loops through a block of code a number of times
+        <p id="forLoop"></p>
+        
+        for/in - loops through the properties of an object
+        <p id="for/in"></p>
+        
+        for/of - loops through the values of an iterable object
+        <p id="for/of"></p>
+
+        ForEach Loop
+        <p id="forEachLoop"></p>
+    </div>
+    <script src="Loops.js"></script>
+    <script> 
+
+        let mystr = ["Hello" ,'hei']
+        mystr.forEach(function fun(element) {
+            console.log(element);
+        });
+    </script>
+</body>
+</html>

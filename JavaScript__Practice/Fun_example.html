@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <h1>Changing Html element value using id</h1>
+        <p id = 'demo'>Welcome to my channel</p>
+        <button onclick="myfun()">CLICK ME</button>
+
+        <h1>Changing Html element  style (css property) using id</h1>
+        <p id = 'demo2'>Welcome to my channel</p>
+        <button onclick="myfun2()">CLICK ME</button>
+
+        <h1>Hide Html element value using id</h1>
+        <p id = 'demo3'>Welcome to my channel</p>
+        <button onclick="myfun3()">CLICK ME</button>
+
+        <h1>Show Hidden Html element value using id</h1>
+        <p id = 'demo4' style="display:none;">Welcome to my channel</p>
+        <button onclick="myfun4()">CLICK ME</button>
+
+        <script>
+            function myfun()
+            {
+                document.getElementById('demo').innerHTML='Hello world...!!!'
+                
+            }
+            function myfun2()
+            {
+                document.getElementById('demo2').style.color='red'           
+            }
+            function myfun3()
+            {
+                document.getElementById('demo3').style.display='none'
+            }
+            function myfun4()
+            {
+                document.getElementById('demo4').style.display='block'
+            }
+        </script>
+    </body>
+</html>

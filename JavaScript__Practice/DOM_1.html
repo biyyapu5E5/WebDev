@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide</title>
+</head>
+<style>
+    h2{
+        text-align: center;
+        font-size: 40px;
+        color: red;
+    }
+    h4{
+        text-align: center;
+    }
+    #para {
+        font-size: 25px;
+    }
+
+    button {
+        border: 2px solid black;
+        padding: 15px 25px;
+        margin-left: 660px;
+        background-color: rgb(83, 226, 83);
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <h2>Heading</h2>
+    <h4>Click the button to Hide Content</h4>
+    <h4>Click the button again to Show Content</h4>
+    <p id='para'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+        suscipit fugiat soluta aperiam quas inventore, vero id ipsum eos.
+        Dicta nemo mollitia placeat tempora, corrupti ea repellendus aut
+        magnam doloremque modi, quae dignissimos quaerat quidem inventore
+        minus? Voluptates, voluptatem expedita? Commodi explicabo asperi
+        similique tempora dolores numquam voluptate ad Lorem ipsum dolor
+        amet consectetur adipisicing elit. Corrupti ut Lorem ipsum dolor
+        suscipit fugiat soluta aperiam quas inventore, vero id ipsum eos.
+        Dicta nemo mollitia placeat tempora, corrupti ea repellendus aut
+        magnam doloremque modi, quae dignissimos quaerat quidem inventore
+        minus? Voluptates, voluptatem expedita? Commodi explicabo asperio
+        similique tempora dolores numquam voluptate ad
+    </p>
+    <button onclick="toggleHide()">Show/Hide</button>
+</body>
+<script>
+    let msg = document.getElementById('para')
+    function toggleHide() {
+        // if(msg.style.display!='none') or
+        if (para.style.display != 'none') {
+            msg.style.display = 'none';
+        }
+        else {
+            msg.style.display = 'block';
+        }
+    }
+
+    msg.addEventListener('mouseover', function fun() {
+        console.log("Mouse Inside para");
+    })
+
+    msg.addEventListener('mouseout', function fun2() {
+        console.log("Mouse Outside para");
+    })
+
+    msg.addEventListener('mousedown', function run() {
+        document.write("mouseDown");
+    })
+</script>
+
+</html>

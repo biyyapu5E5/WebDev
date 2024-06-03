@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide_2</title>
+</head>
+<!-- DOM_1 or DOM_2 Both for Event Listener can be written 2 ways -->
+<!-- without EventListener it is written in inside html -->
+<style>
+    h2
+    {
+        text-align: center;
+        font-size: 40px;
+        color: red;
+    }
+    h4 
+    {
+        text-align: center;
+    }
+    #para 
+    {
+        font-size: 25px;
+    }
+    button 
+    {
+        border: 2px solid black;
+        padding: 15px 25px;
+        margin-left: 660px;
+        background-color: rgb(83, 226, 83);
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h2>Heading</h2>
+    <h4>Place mouse on the button to Show Content</h4>
+    <h4>remove mouse on the button again to Hide Content</h4>
+    <button onmouseenter ="mouse_enter_fun()" onmouseleave="mouse_leave_fun()">Show/Hide</button>
+    <p id = 'para' style="display: none;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+        suscipit fugiat soluta aperiam quas inventore, vero id ipsum eos. 
+        Dicta nemo mollitia placeat tempora, corrupti ea repellendus aut 
+        magnam doloremque modi, quae dignissimos quaerat quidem inventore 
+        minus? Voluptates, voluptatem expedita? Commodi explicabo asperi
+        similique tempora dolores numquam voluptate ad Lorem ipsum dolor 
+        amet consectetur adipisicing elit. Corrupti ut Lorem ipsum dolor
+        suscipit fugiat soluta aperiam quas inventore, vero id ipsum eos. 
+        Dicta nemo mollitia placeat tempora, corrupti ea repellendus aut 
+        magnam doloremque modi, quae dignissimos quaerat quidem inventore 
+        minus? Voluptates, voluptatem expedita? Commodi explicabo asperio
+        similique tempora dolores numquam voluptate ad
+    </p>
+</body>
+<script>
+    function mouse_enter_fun(){
+        para.style.display = 'block';
+    }
+    function mouse_leave_fun() {
+        para.style.display='none';
+    }
+</script>
+</html>

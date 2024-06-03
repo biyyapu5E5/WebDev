@@ -1,0 +1,173 @@
+<!-- 
+    Event Listeners 
+    onfocus/onblur (or) onfocusin/onfocusout
+    oninput : immediate change occures
+    onchange : after lossing focus change occures
+    oncut : press ctrl + x
+    oncopy : press ctrl + c
+    onpaste : press ctrl + v
+    ondlbclick : double click to occure change 
+    oninvalid : check if it is valid (we need to pass required attribute)
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .data {
+        padding-left: 20px;
+    }
+    input{
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+    }
+    input[type='text'],input[type='tel']{
+        /* padding: 10px 100px 10px 0px; */
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+        overflow: visible;
+    }
+
+    /* tr,td,table{
+        border: 2px solid red;
+    } */
+    table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    td {
+        font-size: 25px;
+    }
+    button{
+        padding: 10px 58px;
+        background-color: black;
+        color: aliceblue;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+    }
+</style>
+
+<body>
+    <table>
+        <form action="" onsubmit ='submit_fun()'>
+            <tr>
+                <td> UserFirstName : </td>
+                <td class="data">
+                    <input 
+                    type="text" 
+                    name="firstname" 
+                    id="firstname" 
+                    onchange="change_fun(this)">
+                </td>
+            </tr>
+            <tr>
+                <td> UserLastName : </td>
+                <td class="data">
+                    <input 
+                    type="text" 
+                    name="lastname" 
+                    id="lastname" 
+                    oninput="input_fun(this)">
+                </td>
+            </tr>
+            <tr>
+                <td>PhoneNumber : </td>
+                <td class="data">
+                    <input 
+                    type="tel" 
+                    name="phone" 
+                    id="phone" 
+                    onfocus="focus_fun(this)"
+                    pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' 
+                    placeholder="Example: 123-456-789" 
+                    required>
+                </td>
+            </tr>
+            <tr>
+                <td>Mail : </td>
+                <td class="data">
+                    <input 
+                    type="text" 
+                    name="mail" 
+                    id="mail" 
+                    onfocus="focus_fun(this)"
+                    onblur="blur_fun(this)">
+                </td>
+            </tr>
+            <tr>
+                <td>Rating: </td>
+                <td class='data'>
+                    <input 
+                    type='range' 
+                    name='rating' 
+                    id='range' 
+                    oninput='rating_fun(this)'
+                    value = '5'
+                    min = '1' 
+                    max = '5'
+                    step='1'>
+                    <span id = 'rating'>5</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button>SUBMIT</button>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td><div id = 'submitted'> hei</div></td>
+            </tr> -->
+        </form>
+    </table>
+
+</body>
+<script>
+    function change_fun(text) {
+        text.value = text.value.toUpperCase();
+    }
+    function input_fun(text) {
+        text.value = text.value.toUpperCase();
+    }
+    function focus_fun(element) {
+        element.style.backgroundColor = 'lightgreen';
+    }
+    function blur_fun(element) {
+        element.style.backgroundColor = 'red';
+    }
+    function rating_fun(number){
+        document.getElementById('rating').innerHTML = number.value;
+    }
+    function submit_fun(){
+        document.write(`
+        <h1>
+        Your Details are:
+        </h1>
+        <h2> 
+        FirstName : ${firstname.value}
+        <br>
+        LastName : ${lastname.value}
+        <br>
+        Phone number : ${phone.value}
+        <br>
+        Mail Id : ${mail.value}
+        <br>
+        Rating : ${range.value}
+        </h2>
+        `);
+    }
+</script>
+
+</html>

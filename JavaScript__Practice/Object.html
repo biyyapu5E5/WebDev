@@ -1,0 +1,130 @@
+<html>
+    <body>
+        <p id = 'demo-1'></p>
+        <p id = 'demo-2'></p>
+        <p id = 'demo-3'></p>
+        <p id = 'demo-4'></p>
+        <script>
+
+            const car = {Name : "Audi", color:"Red", Model : "19Q1A5"};
+            document.getElementById('demo-1').innerHTML = 
+            `<pre>
+            Keys: ${Object.keys(car)}
+            Name Key: ${car.Name}
+            Name Key: ${car['Name']}
+            Object to String : ${JSON.stringify(car)}
+            String to Object: ${JSON.parse(JSON.stringify(car))}
+            Object to String : ${car.toString()}
+            </pre>`;
+
+            // Object Constructor
+            function Person(fname,lname,age){
+                this.fname = fname;
+                this.lname = lname;
+                this.age = age;
+            }
+
+            const p1 = new Person('Paddu','Biyyapu',20);
+            const p2 = new Person('Manu','Pasupuleti',25);
+
+            document.getElementById('demo-2').innerHTML = 
+            `<h3> p1 Object : </h3>
+            <pre>
+                Name : ${p1.fname}
+                Age  : ${p1.age}
+            </pre>
+            <h3> p2 Object : </h3>
+            <pre>
+                Name : ${p2.fname}
+                Age  : ${p2.age}
+            </pre>
+            `
+            // Adds property to Person class using 'prototype'
+            Person.prototype.section = 'A';
+
+            document.getElementById('demo-3').innerHTML = 
+            `<h3> p1 Object : </h3>
+            <pre>
+                Name     : ${p1.fname}
+                Age      : ${p1.age}
+                Section  : ${p1.section}
+                </pre>
+            <h3> p2 Object : </h3>
+            <pre>
+                Name     : ${p2.fname}
+                Age      : ${p2.age}
+                Section  : ${p2.section}
+            </pre>
+            `
+            // If u want to change particular Object for section then
+            p2.section = 'B';
+            console.log("P1 Object : "+p1.section);
+            console.log("P2 Object : "+p2.section);
+
+            // Adds Method to Person class using 'prototype'
+            Person.prototype.fullName = function() {
+                    return this.fname + " " + this.lname;
+            };
+
+            document.getElementById('demo-3').innerHTML = 
+            `<h3> p1 Object : </h3>
+            <pre>
+                FirstName   : ${p1.fname}
+                Age         : ${p1.age}
+                Section     : ${p1.section}
+                FullName    : ${p1.fullName()}
+                </pre>
+            <h3> p2 Object : </h3>
+            <pre>
+                FirstName     : ${p2.fname}
+                Age           : ${p2.age}
+                Section       : ${p2.section}
+                FullName      : ${p2.fullName()}
+            </pre>
+            `
+
+            // Define object
+        const obj = {counter : 0};
+
+        // Define setters and getters
+        Object.defineProperty(obj, "reset", {
+        get : function () {
+                return this.counter = 0;
+            }
+        });
+        Object.defineProperty(obj, "increment", {
+        get : function () {
+                return this.counter++;
+            }
+        });
+        Object.defineProperty(obj, "decrement", {
+        get : function () {
+                return this.counter--;
+            }
+        });
+        Object.defineProperty(obj, "add", {
+        set : function (value) {
+                this.counter += value;
+            }
+        });
+        Object.defineProperty(obj, "subtract", {
+        set : function (value) {
+                this.counter -= value;
+            }
+        });
+
+        // Play with the counter:
+        console.log("Initial Counter : "+ obj.counter);
+        obj.add = 20;
+        console.log("Adding 20 : "+obj.counter);
+        obj.subtract = 2;
+        console.log("Subtracting 2 : "+obj.counter);
+        obj.increment;
+        console.log("Increment : "+obj.counter);
+        obj.reset;
+        console.log("Resting Counter : "+obj.counter);
+        obj.decrement;
+        console.log("Decrement : "+obj.counter);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>SetTimeout</h1>
+        <p id ='span1'>Some content</p>
+        <p id = 'span2'>This Content will be loaded after 3 seconds</p>
+    </div>
+    <script>
+        // setTimeout : Allows the function to run once after the time interval
+        // clearTimeOut : cleares the time
+
+        // Normal function
+        function fun() {
+            span1.innerHTML="Welcome to my Channel...!!";
+        }
+        fun();
+
+
+        // Normal function with setTimeout 3000 milliseconds (is equal to 3seconds)
+        function greet() {
+            span2.innerHTML="Loaded..content.....!!";
+        }
+        setTimeout(greet,3000);
+        // let out = setTimeout(greet,3000);
+        // clearTimeout(out);     --> clears time
+        // setTimeout(greet(),3000);      --> Wrong as it's calling function inside setTimeout  
+
+
+
+
+
+        // with parameters setTimeout
+        function student(name,id) {
+            console.log(`my name is  ${name} with roll-number ${id}`);
+        }
+        setTimeout(student,3000,"Padmini",1763);
+        
+
+
+
+        // function details(names_arr,id_arr) {
+        //     for(let i=0;i<names_arr.length;i++){
+        //         console.log(`my name is  ${names_arr[i]} with roll-number ${id_arr[i]}`);
+        //     }
+        // }
+        // setTimeout(details,2000,['paddu','venkat','mom','dad'],[101,102,103,104])
+
+
+
+
+        // ShortHand representation for setTimeout
+        // setTimeout(() => {
+            
+        // }, timeout);
+
+        setTimeout((name) => {
+            console.log(`Good Morning.... ${name}...!!`);
+        }, 4000,"Padmini");
+    </script>
+</body>
+</html>

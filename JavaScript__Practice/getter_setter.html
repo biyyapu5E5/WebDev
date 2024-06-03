@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h4{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo-1"></p>
+    <p id="demo-2"></p>
+    <h2>Adding Setter & Getter to an Existing Class</h2>
+    <p id="demo-3"></p>
+    <p id="demo-4"></p>
+    <p id="demo-5"></p>
+    <script>
+        class Student {
+            constructor(name){
+                this.name = name;
+            }
+            // get method defined below & 
+            // calling get method with method_Name not method_Name()
+            get displayName(){
+                return `My Name is ${this.name}`;
+            }
+            // set method defined below & 
+            // calling set method with method_Name = 'new_name' not method_Name('new_name')
+            set changeName(new_name){
+                this.name = new_name;
+            }
+        }
+        const s1 = new Student('Paddu');
+        const s2 = new Student('Venky');
+
+        document.getElementById('demo-1').innerHTML = 
+        `<h2>Student Class Detailes:</h2>
+        <h3> s1 Object Detailes:</h3> 
+        <pre>
+        Name        : ${s1.name}
+        displayName : ${s1.displayName} 
+        <h4> Changing Name </h4>
+        ${s1.changeName = 'Padmini'}  
+        changeName  : ${s1.name}
+        </pre>`;
+
+        document.getElementById('demo-2').innerHTML = 
+        `<h3> s2 Object Detailes:</h3> 
+        <pre>
+        Name        : ${s2.name}
+        displayName : ${s2.displayName}
+        <h4> Changing Name </h4>
+        ${s2.changeName = 'Venkat'}  
+        changeName  : ${s2.name}
+        </pre>`;
+
+        class Animal{
+            constructor(name){
+                this.name = name;
+            }
+        }
+        // Adding getter & setter methods to Animal class that can be accessed by every object
+        Object.defineProperty(Animal.prototype,'canDo',{
+            // we can use get as Arrow function also
+            get : function(){
+                switch(this.name.toLowerCase()){
+                    case 'dog' : return `${this.name} can Walk`;
+                                
+                    case 'fish' : return `${this.name} can Swim`;
+                    
+                    case 'parrot' : return `${this.name} can Fly`;
+                    
+                    default : return `${this.name} is not an Animal`;
+                }
+            },
+            // we can use set as Arrow function also
+            set : function(o) {
+                switch(o){
+                    case 'upper' : this.name = `<h4>${this.name.toUpperCase()}</h4>`;
+                                    break;
+                    case 'lower' : this.name = `<h4>${this.name.toLowerCase()}</h4>`;
+                                    break;
+                    default : this.name = `<h4>${this.name.charAt(0).toUpperCase()+ this.name.slice(1)}</h4>`;
+                }
+            }
+        });
+
+        const a1 = new Animal('Dog');
+        const a2 = new Animal('CAT');
+        const a3 = new Animal('parrot');
+
+        document.getElementById('demo-3').innerHTML = 
+        `<h2> Animal Class Details :</h2>
+        <h3> a1 Object Details: </h3>
+        <pre>
+            Name : ${a1.name}
+            getMethod : ${a1.canDo}
+            ${a1.canDo = 'upper'} 
+            setMethod : ${a1.name}
+        </pre>`
+
+        document.getElementById('demo-4').innerHTML = 
+        `<h3> a2 Object Details: </h3>
+        <pre>
+            Name : ${a2.name}
+            getMethod : ${a2.canDo}
+            ${a2.canDo = 'lower'} 
+            setMethod : ${a2.name}
+        </pre>`
+
+        document.getElementById('demo-5').innerHTML = 
+        `<h3> a3 Object Details: </h3>
+        <pre>
+            Name : ${a3.name}
+            getMethod : ${a3.canDo}
+            ${a3.canDo = 'hehe'} 
+            setMethod : ${a3.name}
+        </pre>`
+    </script>
+</body>
+</html>

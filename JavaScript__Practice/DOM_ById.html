@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <!-- <style>
+
+            #PRE 
+            {
+                border: 1px solid red;
+                padding: 10px;
+                
+            }
+
+        </style> -->
+        
+    </head>
+
+    <body>
+
+        <p id = "Hei">Hei</p>
+        <h1 id = "H1">Hello</h1>
+        <pre id = "PRE" style = "color: Red;">
+            The document.write() method in JavaScript is not 
+            specifically designed for testing purposes but rather for 
+            dynamically generating and inserting content into an HTML document.
+        </pre>
+        
+        <pre id = "PRE2" style = "color: Red; margin: 20px; background-color: black;">
+            The document.write() method in JavaScript is not 
+            specifically designed for testing purposes but rather for 
+            dynamically generating and inserting content into an HTML document.
+        </pre>
+        <button onclick = "fun()">Click to change margin, bg color & txt color</button>
+
+        <script>
+
+            document.getElementById('Hei').innerHTML = "Hello world..........!!";
+            document.getElementById('H1').innerHTML;
+            var s =  document.getElementById('PRE');
+            s.style.border = "4px solid blue";
+            s.style.padding = "40px";
+
+            function fun()
+            {
+                var result = document.getElementById('PRE2');
+                result.style.margin = "100px";
+                result.style.backgroundColor = "chocolate";
+                result.style.color = '#00ff00';
+            }
+
+
+        </script>
+
+
+
+    </body>
+</html>
