@@ -1,0 +1,77 @@
+<html>
+    <style>
+        .container 
+        {
+            display: flex;
+            height: 400px;
+            flex-direction: column;
+            /* border:2px solid red; */
+            background-color: rgb(165, 150, 232);
+        }
+        .box 
+        {
+            border: 2px solid black;
+            height: 70px;
+            width: 200px;
+            margin: 20px;
+        }
+        #box-1 
+        {
+            background-color: red;
+            animation-name: paddu;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: 3;
+            animation-fill-mode: forwards;
+        }
+        @keyframes paddu 
+        {
+            from 
+            {
+                width: 100px;
+            }
+            to 
+            {
+                width: 800px;
+            }
+        }
+        #box-2 
+        {
+            background-color: green;
+        /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode; */
+        /* animation: harry 5s ease-in 1s 12 backwards; */
+            animation: paddu 3s ease-out 0s infinite reverse;
+        }
+        #box-3 
+        {
+            animation-name: padmini;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            position: relative;
+            background-color: blue;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes padmini 
+        {
+            from 
+            {
+                top: 50px;
+            }
+            to 
+            {
+                top: 0px;
+            }
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="box" id="box-1"></div>
+            <div class="box" id="box-2"></div>
+            <div class="box" id="box-3">Click</div>
+        </div>
+    </body>
+</html>

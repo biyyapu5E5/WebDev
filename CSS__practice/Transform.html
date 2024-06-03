@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Transform Document</title>
+    </head>
+    <style>
+        .container 
+        {
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            margin-left: 20px;
+            margin-top: 100px;
+        }
+        .box 
+        {
+            display: flex;
+            border: 2px solid black;
+            background-color: rgb(139, 238, 139);
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s ease-in;
+        }
+        #Box1:hover
+        {
+            /* transform: rotate(60deg); */
+            transform: rotate(360deg);
+            /* transform: rotateX(40deg);
+            transform: rotateY(60deg);
+            transform: rotateY(360deg); */
+        }
+        #Box2:hover
+        {
+            /* transform: skew(360deg); */
+            transform: skew(26deg);
+            /* transform: skewX(46deg);
+            transform: skewY(86deg); */
+        }
+        #Box3:hover
+        {
+            transform: scale(1.3);
+            /* transform: scale3d(1,4,2); */
+            /* transform: scaleX(2);
+            transform: scaleY(2);
+            transform: scaleZ(2); */
+        }
+        #Box4:hover
+        {
+            transform: translate(10px,300px);   
+        }
+        #Box5:hover
+        {
+            transform: translateX(200px);
+        } 
+        #Box6:hover
+        {
+            transform: translateY(200px);
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="box" id = "Box1">Rotate Box</div>
+            <div class="box" id = "Box2">Skew Box</div>
+            <div class="box" id = "Box3">Scale Box</div>
+            <div class="box" id = "Box4">Transulate(X,Y) Box</div>
+            <div class="box" id = "Box5">TransulateX Box</div>
+            <div class="box" id = "Box6">TransulateY Box</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+}
+/* img {
+    width : 100px;
+    height: 100px;
+}
+div {
+    background-color: cadetblue;
+    padding: 20px;
+    border: 10px solid green;
+    outline: 30px solid lightgreen;
+    margin: 80px;
+}
+span {
+    background-color: burlywood;
+    padding: 15px;
+    border: 10px solid red;
+    outline: 5px solid lightcoral;
+    width: 100px;
+    height: 50px;
+} */
+/* #parent {
+    background-color: cornflowerblue;
+    height: 50vw;
+}
+p {
+    background-color: chocolate;
+    width: 50%;
+} */
+* {
+    margin: 0;
+}
+.navBar {
+    color: white;
+    font-weight: 500;
+    font-family:cursive ;
+    background-color: rgb(17, 146, 226);
+    padding: 2.4rem;
+    background-image: url('/background.png');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: -160px;
+    background-size: 295px;
+}
+.heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.title {
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-right: 20px;
+}
+.img-container {
+    margin-left: 10px;
+}
+.img-container > img {
+    width : 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 5px solid white;
+    margin-left: -20px;
+    vertical-align: middle;
+}
+a:any-link {
+    color: red;
+}
+#person {
+    width: 200px;
+}

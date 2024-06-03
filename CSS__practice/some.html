@@ -1,0 +1,129 @@
+<!-- [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25]] -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .center{
+            text-align: center;
+        }
+        .main-container{
+            background-color: rgb(221, 218, 218);
+            width: 250px;
+            height: 100vh;
+            /* border-right-style: solid;
+            border-right-color: black; */
+            box-shadow: 4px 4px 20px 5px black;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+    .container{
+        position: relative;
+        padding: 30px 0px;
+        width: 10px;
+    }
+    #container-1{
+        background-color: rgb(235, 91, 91);
+    }
+    #container-2{
+        background-color: rgb(114, 114, 249);
+        margin-top: 5px;
+    }
+    #container-3{
+        background-color: rgb(83, 230, 83);
+        margin-top: 5px;
+    }
+    #container-4{
+        background-color: rgb(172, 96, 243);
+        margin-top: 5px;
+    }
+    .content{
+        font-size: 20px;
+        color: black;
+        width: 250px;
+        position: absolute;
+        bottom: 12px;
+    }
+    .container:hover{
+        animation-name: paddu;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes paddu{
+        0%{
+            width: 10px;
+        }
+        100%{
+            width: 250px;
+        }
+    }
+    .option{
+        width: 250px;
+        padding: 20px 0px;
+        margin-bottom: 2px;
+        background-color: rgb(234, 136, 15);
+        color: aliceblue;
+    }
+    li{
+        list-style-type: none;
+        text-align: center;
+        width: 250px;
+        padding: 15px 0px;
+        font-size: 20px;
+    }
+    .dropdown:hover .option{
+        background-color: rgb(49, 200, 49);
+        display: block;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-content{
+        background-color: rgb(214, 228, 241);
+        display: none;
+    }
+    li:hover{
+        background-color: rgb(143, 143, 234);
+    }
+</style>
+<body>
+    <div class="main-container">
+        <div class='container' id = 'container-1'>
+            <a href = '#' class='content center'>Home</a>
+        </div>
+        <div class='container' id = 'container-2'>
+            <a href = '#' class='content center'>Content</a>
+        </div>
+        <div class='container' id = 'container-3'>
+            <a href = '#' class='content center'>About Us</a>
+        </div>
+        <div class='container' id = 'container-4'>
+            <a href = '#' class='content center'>Help</a>
+        </div>
+
+        <div class = 'option center'> Css Selectors</div>
+        <div class = 'dropdown'>            
+            <div class = 'option center'>Programming Languages</div>
+            <div class="dropdown-content">
+                <li><a href="#">Python</a></li>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Html</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </div>
+        </div>
+        <div class = 'option center'>Html flex</div>
+        <div class = 'option center'>MediaQueries</div>
+    </div>
+</body>
+</html>
+

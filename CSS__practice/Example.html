@@ -1,0 +1,34 @@
+<html>
+    <script>
+        function fun()
+        {
+            var checked_gender = document.querySelector('input[name = "fav"]:checked');
+            if(checked_gender.value=="two")
+            {  //Test if something was checked
+                alert("Correct Answer"); //Alert the value of the checked.
+            } 
+            else 
+            {
+                alert('Wrong Answer'); //Alert, nothing was checked.
+            }
+        }
+    </script>
+    <body>
+        <form action="">
+            <input type="radio" name="fav" id="one" value="one">
+            <label for="one">one</label>
+            <input type="radio" name="fav" id="two" value="two">
+            <label for="two">two</label>
+            <input type="radio" name="fav" id="three" value="three">
+            <label for="three">three</label>
+            <br>
+            <input type="radio" name="fav1" id="one" value="one">
+            <label for="one">one</label>
+            <input type="radio" name="fav1" id="two" value="two">
+            <label for="two">two</label>
+            <input type="radio" name="fav1" id="three" value="three">
+            <label for="three">three</label>
+            <input type="submit" onclick="fun()">
+        </form>
+    </body>
+</html>

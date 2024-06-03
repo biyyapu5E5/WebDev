@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Animation Document</title>
+    </head>
+
+    <style>
+        body
+        {
+            margin: 0px;
+            
+        }
+
+        .container{
+                display: flex;
+                
+                background-color: blueviolet;
+                width: 400px;
+                height: 400px;
+                margin: 100px 400px;
+        }
+        .box 
+        {
+            background-color: bisque;
+            height: 100px;
+            width: 100px;
+            animation-name: paddu;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+            /* animation-timing-function: linear; */
+        /*  animation-timing-function
+            linear	        The animation has the same speed from start to end	
+            ease	        Default value. The animation has a slow start, then fast, before it ends slowly	
+            ease-in	        The animation has a slow start	
+            ease-out	    The animation has a slow end	
+            ease-in-out	    The animation has both a slow start and a slow end 
+        */
+            animation-delay: 1s;
+            /* animation-direction: alternate; */
+            /* animation-direction: reverse;
+            animation-direction: alternate-reverse; */
+            /* Play the animation forwards first, then backwards */
+        }
+        @keyframes paddu {
+            0%
+            {
+                margin-left: 300px;
+                background-color: red;
+            }
+            40%
+            {
+                margin-top: 300px;
+                margin-left: 300px;
+                margin-right: 0px;
+                background-color: aqua;
+            }
+            60% 
+            {
+                margin-top: 300px;
+                background-color: greenyellow;
+                margin-right: 300px;
+                margin-left: 0px;
+            }
+            80%
+            {
+                margin-top: 0px;
+                margin-right: 300px;
+                margin-left:0px;
+                background-color: pink;
+            }
+            100% 
+            {
+                margin-top:0px;
+                margin-left: 300px;
+                margin-right: 0px;
+                background-color: brown;
+            }
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="box">
+                
+            </div>
+        </div>
+    </body>
+</html>

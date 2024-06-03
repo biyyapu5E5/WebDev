@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        /* border: 2px solid black; */
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        /* object-fit: cover; */
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(11, 5vw);
+        gap: 2px;
+        /* background-color: rgb(100, 100, 235); */
+        width: 80%;
+    }
+
+    #image-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 12;
+    }
+
+    #image-2 {
+        grid-column-start: 3;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+
+    #image-3 {
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 6;
+    }
+
+    #image-4 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 6;
+        grid-row-end: 9;
+    }
+
+    #image-5 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 9;
+    }
+
+    #image-6 {
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 12;
+    }
+
+    #image-7 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 9;
+        grid-row-end: 12;
+    }
+
+    #image-8 {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 9;
+        grid-row-end: 12;
+    }
+    .image{
+        position: relative;
+    }
+    .image img:hover{
+        border-radius: 50%;
+        transition: 0.2s;
+    }
+    p{
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p class="image" id="image-1">Grid - 1
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRecq60sB5w9VkFsPcHnd6Ebav1W0UeTv5C-w&usqp=CAU" alt="">
+        </p>
+        <p class="image" id="image-2">Grid - 2
+            <img
+                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM-WtnJVMzddp2q_KOl6DZCNDiFqEpQnwcOQ&usqp=CAU' />
+        </p>
+        <p class="image" id="image-3">Grid - 3
+            <img
+                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZof_FZRtmnOMMWtNarqAN0CPc0v0dwQ8DCw&usqp=CAU' />
+        </p>
+        <p class="image" id="image-4">Grid - 4
+            <img
+                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN_Dap1JjDe2mQpi2FeEfC-pIXJmRbpYHmug&usqp=CAU' />
+        </p>
+        <p class="image" id="image-5">Grid - 5
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeD9lji_5el7kiC37hV9r_s0y-8pgEe6wPrw&usqp=CAU' />
+        </p>
+        <p class="image" id="image-6">Grid - 6
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeQUWNYvXXz64kDPoPw86izHm8QgdRfTyixQ&usqp=CAU" alt="">
+        </p>
+        <p class="image" id="image-7">Grid - 7
+            <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZjKPcX1sbToq1z57paMv7zBYuVLcdPY1ROsNVPX-RoFz0GiL07kkKQEyRmmMP-U8dMpw&usqp=CAU' />
+        </p>
+        <p class="image" id="image-8">Grid - 8
+            <img
+                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR85t4Apu_jHFW4f5US1AHMoJvYwlQzs0bemw&usqp=CAU' />
+        </p>
+        <!-- <p class="image" id="image-9"><img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgWvYpZpl6BY5xE5_HCcf2hl7BNINwEkURg&usqp=CAU'/>9</p>
+        <p class="image" id="image-10"><img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1xKOfXZZCcPT2ISHruRyhiV-E-G2RrYO5yw&usqp=CAU'/>10</p>
+        <p class="image" id="image-11"><img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM-WtnJVMzddp2q_KOl6DZCNDiFqEpQnwcOQ&usqp=CAU'/>11</p>
+        <p class="image" id="image-12"><img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiWAnPq4RvGKPu9MDNq55uiPgN5CVRJaC5g&usqp=CAU'/>12</p> -->
+    </div>
+</body>
+<!-- <script>
+    function mouse_enter(params){
+        // container[0].style.opacity = 0.5;
+        params.style.opacity = '0.3';
+        // heading.style.zIndex = '1';
+        heading.style.opacity = '1';
+        console.log("Gray-Color");
+    }
+    function mouse_leave(){
+        let container = document.getElementsByClassName('container');
+        container[0].style.opacity = '1';
+        console.log("Original_Color");
+    }
+</script> -->
+
+</html>

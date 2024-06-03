@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    /* *{
+        margin: 0; 
+    } */
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2px;
+        background-color: rgb(13, 126, 226);
+        border: 2px solid black;
+        padding: 5px 5px 0px 5px;
+    }
+    .item{
+        color: white;
+        background-color: rgb(59, 57, 57);
+        padding: 30px;
+        text-align: center;
+    }
+    #item-1{
+        /* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+        /* grid-area: 2/1/span 2/span 3; */
+        /* or */
+        grid-area: 2/1/4/4;
+    }
+</style>
+<body>
+    <div class="container">
+        <p class="item" id="item-1">Box-1</p>
+        <p class="item" id="item-2">Box-2</p>
+        <p class="item" id="item-3">Box-3</p>
+        <p class="item" id="item-4">Box-4</p>
+        <p class="item" id="item-5">Box-5</p>
+        <p class="item" id="item-6">Box-6</p>
+        <p class="item" id="item-7">Box-7</p>
+        <p class="item" id="item-8">Box-8</p>
+        <p class="item" id="item-9">Box-9</p>
+        <p class="item" id="item-10">Box-10</p>
+        <p class="item" id="item-11">Box-11</p>
+        <p class="item" id="item-12">Box-12</p>
+    </div>
+</body>
+</html>

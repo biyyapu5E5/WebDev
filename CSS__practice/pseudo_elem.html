@@ -1,0 +1,99 @@
+<!-- pseudo-element ('::' double colon)
+    adding or targeting an extra element without adding more html 
+    syntax- 
+    selector::pseudo-element{
+        property: value
+    } 
+    examples 
+    ::first-letter
+    ::first-line
+    ::after
+    ::before
+    ::marker
+    ::selection
+    ::placeholder
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element</title>
+</head>
+<style>
+    body {
+        background-color: rgb(37, 36, 36);
+        color: rgb(197, 195, 195);
+    }
+
+    h2 {
+        font-size: 55px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    h2::before {
+        content: "Main ";
+        color: rgb(234, 72, 72);
+    }
+
+    h2::after {
+        content: ' Tag';
+        color: rgb(74, 74, 239);
+    }
+
+    #paragraph::first-letter {
+        color: yellow;
+        font-size: 45px;
+    }
+
+    #paragraph::first-line {
+        color: violet;
+    }
+    #para::selection {
+        color: coral;
+    }
+    ul{
+        font-size: 35px;
+    }
+    li::marker{
+        color: red;
+    }
+    #items li::marker{
+        color: rgb(130, 238, 152);
+    }
+    #items li{
+        list-style-type: square;
+    }
+</style>
+
+<body>
+    <h2>Heading</h2>
+    <p id='paragraph'>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste porro officiis, pariatur
+        ducimus odit aut unde nisi repellendus ratione omnis? Obcaecati, rem aperiam? Maxime
+        architecto dolores consequatur ducimus. Molestiae sunt veritatis officia nemo ipsum dolorum
+        pariatur suscipit deleniti tempore quos.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste porro
+        officiis, pariatur
+    </p>
+    <p id="para">
+        select the text to change the color Like a pro !!
+    </p>
+    <ul>
+        <li>unordered list item 1</li>
+        <li>unordered list item 2</li>
+        <li>unordered list item 3</li>
+    </ul>
+    <ul id = 'items'>
+        <li>unordered list item 4</li>
+        <li>unordered list item 5</li>
+        <li>unordered list item 6</li>
+        
+    </ul>
+</body>
+
+</html>

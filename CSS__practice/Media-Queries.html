@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container 
+        {
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar' 
+            'head head head head'
+            'section section section section'
+            'footer footer footer footer';
+        }
+    @media all and (min-width: 800px) 
+        {
+                body {
+                    background-color: rgb(126, 240, 126);
+                }
+                .container 
+                {
+                    display: grid;
+                    grid-gap: 2rem;
+                    grid-template-areas: 
+                    'navbar navbar navbar' 
+                    'head head head head'
+                    'section section section section'
+                    'footer footer footer footer';
+                }
+        }
+        @media only screen and (min-width: 500px) and (max-width:800px) 
+        {
+                body {
+                    background-color: rgb(231, 231, 117);
+                }
+                .container 
+                {
+                    grid-template-areas: 
+                        "navbar navbar navbar navbar"
+                        "head head head section"
+                        "footer footer footer footer";
+                }
+        }
+        @media only screen and ((min-width: 300px) and (max-width:500px))
+        {
+                body {
+                    background-color: rgb(109, 109, 230);
+                }
+                .container 
+                {
+                    grid-template-areas: 
+                        "navbar navbar navbar navbar"
+                        "head head head head"
+                        "footer footer footer footer";
+                }
+                section 
+                {
+                    display: none;
+                }
+        }
+        @media only screen and (max-width:300px) 
+        {
+            body {
+            background-color: rgb(233, 108, 108);
+            }
+            nav 
+            {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media only screen and (max-width:130px)
+        {
+            body 
+            {
+                background-color: blueviolet;
+            }
+        }
+        .bar 
+        {
+            border: 2px solid black;
+            padding: 23px 23px;
+            background-color: wheat;
+        }
+        nav 
+        {
+            grid-area: navbar;
+        }
+        a 
+        {
+            text-decoration: none;
+        }
+        header 
+        {
+            grid-area: head;
+        }
+        section 
+        {
+            grid-area: section;
+            font-size: 12px;
+        }
+        footer
+        {
+            grid-area: footer;
+            text-align: center;
+        }
+</style>
+<body>
+    <div class="container">
+        <nav class="bar">
+            <a href="">Home</a>
+            <a href="">Contact</a>
+            <a href="">Menu</a>
+            <a href="">Help</a>
+        </nav>
+        <header class="bar">I am Heading</header>
+        <section class="bar">
+            <h2>WWF's Symbol</h2>
+            <p>The Panda has become the symbol of WWF. The well-known panda logo of someone. 
+                </p>
+        </section>
+        <footer class="bar">
+            Copy right &copy; All rights are reserved..!!!
+        </footer>
+    </div>
+</body>
+</html>

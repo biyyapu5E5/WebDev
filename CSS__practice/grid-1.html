@@ -1,0 +1,82 @@
+<html>
+    <style>
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        h2
+        {
+            border: 3px solid black;
+            text-align: center;
+        }
+        .container 
+        {
+            /* background-color: rgb(222, 71, 96); */
+            display:grid;
+            /* grid-template-columns: repeat(5,3fr); */
+            /* grid-column-gap: 1rem; */
+            grid-row-gap: 5rem;
+            /* justify-content: center; */
+            grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
+            
+        }
+        .demo1
+        {
+            display: grid;
+            /* width: 200px; */
+            height: 200px;
+            background-position: center;
+            grid-row-gap: 2rem;
+            background-color: rgb(222, 71, 96);
+
+        }
+        .demo
+        {
+            width: 200px;
+            height: 200px;
+            background-position: center;
+        }
+
+        .box 
+        {
+            background-color: none;
+            border: 2px solid black;
+            width: 200px;
+            height: 20px;
+            text-align: center;
+
+        }
+    </style>
+    <body>
+        <br>
+        <h2><i>Breakfast</i></h2>
+        <br>
+        <div class="container">
+            <div class="demo1">
+                <img src="https://www.shutterstock.com/image-photo/chole-bhature-spicy-chick-peas-260nw-1867969534.jpg" alt="" class="demo">
+                <div class="box" >Puri</div>
+            </div>
+
+            <div class="demo1">
+                <img src="https://static.toiimg.com/thumb/msid-78767001,width-1280,resizemode-4/78767001.jpg" alt="" class="demo">
+                <div class="box" >Dosa</div>
+            </div>
+
+            <div class="demo1">
+                <img src="https://t4.ftcdn.net/jpg/04/65/28/87/360_F_465288715_F3uc0aZMhzSbNbftEzHSb6RfUVQfCHeU.jpg" alt="" class="demo">
+                <div class="box" >Idli & Vada</div>
+            </div>
+
+            <div class="demo1">
+                <img src="https://www.krumpli.co.uk/wp-content/uploads/2023/05/Homemade-Indian-Chapati-02-735x735.jpg" alt="" class="demo">
+                <div class="box" >Chapati</div>
+            </div>
+            <div class="demo1">
+                
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSSp0C_1NrVtlur5ivEOe2OY_awZKstM-PMQ&usqp=CAU" alt="" class ="demo">
+            <div class="box" >Egg Dosa</div>
+            </div>
+        </div>
+    </body>
+</html>
